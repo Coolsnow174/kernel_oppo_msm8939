@@ -2399,6 +2399,9 @@ CONFIG_RADIO_ADAPTERS=y
 # CONFIG_RADIO_IRIS is not set
 # CONFIG_RADIO_SILABS is not set
 # CONFIG_CYPRESS_FIRMWARE is not set
+CONFIG_RADIO_IRIS=y
+CONFIG_RADIO_IRIS_TRANSPORT=y
+
 
 #
 # Media ancillary drivers (tuners, sensors, i2c, frontends)
