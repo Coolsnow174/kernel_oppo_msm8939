@@ -690,9 +690,10 @@ static int msm_mpm_dev_probe(struct platform_device *pdev)
 	xo_clk = devm_clk_get(&pdev->dev, clk_name);
 
 	if (IS_ERR(xo_clk)) {
-		pr_err("%s(): Cannot get clk resource for XO\n", __func__);
-		return PTR_ERR(xo_clk);
-	}
+        pr_err("%s(): Cannot get clk resource for XO rc=%ld\n",
+               __func__, PTR_ERR(xo_clk));
+        return PTR_ERR(xo_clk);
+}
 
 	res = platform_get_resource_byname(pdev, IORESOURCE_MEM, "vmpm");
 	if (!res) {
